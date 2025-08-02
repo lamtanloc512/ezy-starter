@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Ezy starter template",
   "scripts": {
+    "dev": "concurrently -n theme,admin -c cyan,magenta \"browser-sync start --config 'ezy-starter-theme/bs-theme-config.js'\" \"browser-sync start --config 'ezy-starter-admin-plugin/bs-admin-config.js'\"",
     "dev:theme": "browser-sync start --config 'ezy-starter-theme/bs-theme-config.js'",
     "dev:admin": "browser-sync start --config 'ezy-starter-admin-plugin/bs-admin-config.js'"
   },
@@ -14,6 +15,7 @@
     "ezy-starter/*"
   ],
   "devDependencies": {
-    "browser-sync": "^3.0.4"
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.0"
   }
 }

@@ -33,6 +33,15 @@
       "args": ["dev:theme"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "LivereloadAll",
+      "runtimeExecutable": "pnpm",
+      "args": ["dev"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
     }
   ],
   "compounds": [
@@ -43,6 +52,10 @@
     {
       "name": "Dev-Theme",
       "configurations": ["LivereloadTheme", "EzyTheme"]
+    },
+    {
+      "name": "Dev-All",
+      "configurations": ["LivereloadAll", "EzyAdmin", "EzyTheme"]
     }
   ]
 }

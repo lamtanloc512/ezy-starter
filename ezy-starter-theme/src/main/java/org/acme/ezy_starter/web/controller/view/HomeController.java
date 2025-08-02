@@ -12,8 +12,16 @@ public class HomeController {
     @DoGet("/")
     public View home() {
         return View.builder()
-            .template("home")
-            .addVariable(VIEW_VARIABLE_PAGE_TITLE, "home")
-            .build();
+                .template("home")
+                .addVariable(VIEW_VARIABLE_PAGE_TITLE, "home")
+                .build();
+    }
+
+    @DoGet("/page")
+    public View page() {
+        return View.builder()
+                .template("page")
+                .addVariable(VIEW_VARIABLE_PAGE_TITLE, "page")
+                .build();
     }
 }

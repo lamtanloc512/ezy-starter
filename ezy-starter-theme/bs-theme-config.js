@@ -5,13 +5,11 @@ module.exports = {
   proxy: `localhost:${EZYPORT}`,
   port: 3003,
   ui: {
-    port: 9191,
+    port: 9192,
   },
-  files: [
-    `${MODULE_NAME}/target/**`,
-  ],
+  files: [`${MODULE_NAME}/target/**`, `${MODULE_NAME}/src/main/resources/**`],
   open: true,
   reloadDelay: 0,
   watch: true,
-  notify: false
+  notify: true,
 };

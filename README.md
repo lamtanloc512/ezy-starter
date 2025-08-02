@@ -45,8 +45,9 @@ mvn clean install
 
 - Mở tab **Run and Debug** trong VSCode.
 - Chọn một trong hai cấu hình sau:
-  - `dev-theme`: dành cho lập trình phần giao diện người dùng (theme).
-  - `dev-admin`: dành cho lập trình phần giao diện quản trị (admin).
+  - `Dev-Theme`: dành cho lập trình phần giao diện người dùng (theme).
+  - `Dev-Admin`: dành cho lập trình phần giao diện quản trị (admin).
+  - `Dev-All`: dành cho lập trình phần (admin) và (theme).
 - Nhấn nút `Play` để bắt đầu chạy ứng dụng.
 
 ## 🌐 Truy cập giao diện

@@ -12,5 +12,6 @@ module.exports = {
   ],
   open: true,
   reloadDelay: 0,
-  watch: true
+  watch: true,
+  notify: false
 };

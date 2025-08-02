@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>org.acme</groupId>
-        <artifactId>ezy-starter</artifactId>
+        <artifactId>ezy_starter</artifactId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ezy-starter-admin-plugin</artifactId>
-    <name>ezy-starter-admin-plugin</name>
+    <artifactId>ezy_starter-admin-plugin</artifactId>
+    <name>ezy_starter-admin-plugin</name>
     <url>https://youngmonkeys.org</url>
 
     <dependencies>
@@ -20,7 +20,7 @@
         <!-- start add sdk dependency -->
         <dependency>
             <groupId>org.acme</groupId>
-            <artifactId>ezy-starter-sdk</artifactId>
+            <artifactId>ezy_starter-sdk</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!-- end add sdk dependency -->

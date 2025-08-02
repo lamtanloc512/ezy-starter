@@ -6,12 +6,12 @@
         <artifactId>ezyplatform-parent</artifactId>
         <version>0.0.2</version>
     </parent>
-    <artifactId>ezy-starter</artifactId>
     <groupId>org.acme</groupId>
+    <artifactId>ezy_starter</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <name>ezy-starter</name>
+    <name>ezy_starter</name>
     <description>Ezy Starter</description>
 
     <properties>

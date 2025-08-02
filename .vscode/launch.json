@@ -1,0 +1,54 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "EzyTheme",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/ezy-starter-theme",
+      "mainClass": "org.acme.ezy_starter.web.test.EzyStarterThemeStartupTest",
+      "env": {
+        "EZYPLATFORM_HOME" : "/home/ethan/Applications/ezyplatform"
+      },
+      "args": ["-Dmaven.test.skip=false", "-jar"]
+    },
+    {
+      "type": "java",
+      "name": "EzyAdmin",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/ezy-starter-admin-plugin",
+      "mainClass": "org.acme.ezy_starter.admin.test.EzyStarterAdminPluginStartupTest",
+      "env": {
+        "EZYPLATFORM_HOME" : "/home/ethan/Applications/ezyplatform"
+      },
+      "args": ["-Dmaven.test.skip=false", "-jar"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "LivereloadAdmin",
+      "runtimeExecutable": "pnpm",
+      "args": ["dev:admin"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "LivereloadTheme",
+      "runtimeExecutable": "pnpm",
+      "args": ["dev:theme"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Dev-Admin",
+      "configurations": ["LivereloadAdmin", "EzyAdmin"]
+    },
+    {
+      "name": "Dev-Theme",
+      "configurations": ["LivereloadTheme", "EzyTheme"]
+    }
+  ]
+}

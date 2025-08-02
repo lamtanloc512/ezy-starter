@@ -66,6 +66,22 @@
                 <!-- Use a recent version -->
                 <executions>
                     <execution>
+                        <id>exec-add-pnpm</id>
+                        <phase>generate-resources</phase>
+                        <!-- Or another suitable phase -->
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>npm</executable>
+                            <arguments>
+                                <argument>install</argument>
+                                <argument>pnpm</argument>
+                            </arguments>
+                            <workingDirectory>${project.basedir}</workingDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>exec-pnpm-install</id>
                         <phase>generate-resources</phase>
                         <!-- Or another suitable phase -->

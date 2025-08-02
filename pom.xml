@@ -10,22 +10,18 @@
     <artifactId>ezy_starter</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-
     <name>ezy_starter</name>
     <description>Ezy Starter</description>
-
     <properties>
         <!--suppress UnresolvedMavenProperty -->
         <ezyplatform.home>${env.EZYPLATFORM_HOME}</ezyplatform.home>
     </properties>
-
     <modules>
         <module>ezy-starter-sdk</module>
         <module>ezy-starter-theme</module>
         <module>ezy-starter-admin-plugin</module>
         <module>ezy-starter-web-plugin</module>
     </modules>
-
     <dependencies>
         <dependency>
             <groupId>org.youngmonkeys</groupId>
@@ -34,7 +30,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -61,6 +56,29 @@
                         <goals>
                             <goal>check</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <!-- Use a recent version -->
+                <executions>
+                    <execution>
+                        <id>exec-pnpm-install</id>
+                        <phase>generate-resources</phase>
+                        <!-- Or another suitable phase -->
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>pnpm</executable>
+                            <arguments>
+                                <argument>install</argument>
+                            </arguments>
+                            <workingDirectory>${project.basedir}</workingDirectory>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
